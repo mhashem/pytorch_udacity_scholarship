@@ -1,6 +1,8 @@
 
 # Lesson 2
 
+### Sigmoid
+
 ### Softmax
 Any time we wish to represent a probability distribution over a discrete variable with **n** possible values, we may use the softmax function. This can be seen as a generalization of the sigmoid function which was used to represent a probability distribution over a binary variable.
 
