@@ -44,3 +44,6 @@ def update_weights(x, y, weights, bias, learnrate):
     bias += learnrate * d_error
     return weights, bias
 ```
+
+### Neural Network Architecture
+
