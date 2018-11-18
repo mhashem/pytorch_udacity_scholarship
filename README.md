@@ -5,4 +5,4 @@ A repository for hosting my notes during the course study
 
 1. [Lesson 1](/notes/Lesson-2.md)
 
-![PyTorch Logo](/images/Pytorch_logo_with_text.png) <img src="/images/Pytorch_logo_with_text.png" height="125" width="512">
+![PyTorch Logo](/images/Pytorch_logo_with_text.png) <img src="/images/Pytorch_logo_with_text.png" height="102.5" width="512.5">
