@@ -7,4 +7,4 @@
 
 ### Implementing the Gradient Descent Algorithm
 
-σ(x) =1 / 1+e−x
+1. Sigmoid Activation Function σ(x) =1 / 1+e−x
