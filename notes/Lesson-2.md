@@ -1,10 +1,13 @@
 
 # Lesson 2
 
+### Softmax
+
+### One-hot encoding
+
+### Maximum Likelihood
+
+### Cross Entropy
+
 ## Gradient Descent Calculation
 
-
-
-### Implementing the Gradient Descent Algorithm
-
-1. Sigmoid Activation Function σ(x) =1 / 1+e−x
