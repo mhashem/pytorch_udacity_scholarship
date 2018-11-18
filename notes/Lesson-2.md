@@ -19,6 +19,8 @@ Softmax functions are most often used as the output of a classifier, to represen
 
 Most deep learning algorithms involve optimization of some sort. Optimization refers to the task of either minimizing or maximizing some function ***f(x)*** by altering ***x***.
 
+![Gradient Descent Slide 1](/images/gradient_descent.png)
+
 
 ### Exercise Implementation
 
