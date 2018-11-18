@@ -6,5 +6,5 @@ A repository for hosting my notes during the course study
 
 ## Notes
 
-1. [Lesson 2](/notes/Lesson-2.md)
-2. [Lesson 3](/notes/Lesson-3.md)
+1. [Lesson 2](/notes/Lesson-2/notes.md)
+2. [Lesson 3](/notes/Lesson-3/notes.md)

@@ -19,7 +19,7 @@ Softmax functions are most often used as the output of a classifier, to represen
 
 Most deep learning algorithms involve optimization of some sort. Optimization refers to the task of either minimizing or maximizing some function ***f(x)*** by altering ***x***.
 
-![Gradient Descent Slide 1](/images/gradient_descent.png)
+![Gradient Descent Slide 1](/notes/Lesson-2/images/gradient_descent.png)
 
 
 ### Exercise Implementation
@@ -50,4 +50,4 @@ def update_weights(x, y, weights, bias, learnrate):
 This section starts by showing how linear models actually form a whole probalistic space, and non-linear models is almost like combining 
 these models together (adding it for example).
 
-
+![Gradient Descent Slide 1](/notes/Lesson-2/images/neural_network_architecture_sigmoid.png)
