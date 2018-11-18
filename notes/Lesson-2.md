@@ -9,5 +9,7 @@
 
 ### Cross Entropy
 
-## Gradient Descent Calculation
+### Gradient Descent
+
+
 
