@@ -1,4 +1,4 @@
-# Pytorch Udacity Scholarship <img src="/images/pytorch_logo.png" align="left" width="50" height="50" alt="PyTorch Logo">
+# Pytorch Udacity Scholarship <img src="/images/pytorch_logo.png" align="right" width="50" height="50" alt="PyTorch Logo">
 A repository for hosting my notes during the course study
 
 
