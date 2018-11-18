@@ -7,4 +7,4 @@
 
 ### Implementing the Gradient Descent Algorithm
 
-$$\sigma(x) = \frac{1}{1+e^{-x}}$$
+σ(x) =1 / 1+e−x
