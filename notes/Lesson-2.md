@@ -47,3 +47,7 @@ def update_weights(x, y, weights, bias, learnrate):
 
 ### Neural Network Architecture
 
+This section starts by showing how linear models actually form a whole probalistic space, and non-linear models is almost like combining 
+these models together (adding it for example).
+
+
