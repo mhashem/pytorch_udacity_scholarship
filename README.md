@@ -8,3 +8,4 @@ A repository for hosting my notes during the course study
 
 1. [Lesson 2](/notes/Lesson-2/notes.md)
 2. [Lesson 3](/notes/Lesson-3/notes.md)
+3. [Lesson 4](/notes/Lesson-4/notes.md)
