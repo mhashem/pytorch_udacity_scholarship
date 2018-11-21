@@ -17,6 +17,24 @@ Softmax functions are most often used as the output of a classifier, to represen
 
 ### One-hot encoding
 
+Sometimes data might be consisting of variables, such as 0, and 1 denoting a git, and no gift classes, however sometimes we have more classes, for example a Duck, a Beaver and Walrus, so we might add another class for example 2, but no this will assume class dependency between data, so we do the encoding of class availability for each record as shown in image below.
+
+![One Hot Encoding](/notes/Lesson-2/images/one_hot_encoding.png)
+
+This is a practice of building good representations of data in hand.
+
+Another good example is the following, an example of generating one-hot vector representations for words using a simple document
+
+![One Hot Encoding](/notes/Lesson-2/images/one_hot_encoding_2.png)
+
+If a document has a vocabulary ```V``` with ```|V|``` words, we can represent the words with
+one-hot vectors. In other words, we have ```V -dimensional``` representation vectors, and
+we associate each unique word with an index in this vector. To represent unique
+word ```wi```, we set the ith component of the vector to be 1, and zero out all of the other
+components.
+
+
+
 ### Maximum Likelihood
 
 ### Cross Entropy
