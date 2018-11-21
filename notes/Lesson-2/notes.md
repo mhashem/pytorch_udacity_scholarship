@@ -3,6 +3,12 @@
 
 ### Sigmoid
 
+A sigmoid function is a mathematical function having a characteristic "S"-shaped curve or sigmoid curve. Often, sigmoid function refers to the special case of the logistic function shown in the first figure and defined by the formula.
+
+Sigmoid Functions are used excessively in neural networks. What distinguishes the perceptron from sigmoid neuron or logistic neuron is the presence of the sigmoid function or the logistic function in the sigmoid neuron.
+
+On one hand, the perceptron outputs discrete 0 or 1 value, a sigmoid neuron outputs a more smooth or continous range of values between 0 and 1.
+
 ### Softmax
 Any time we wish to represent a probability distribution over a discrete variable with **n** possible values, we may use the softmax function. This can be seen as a generalization of the sigmoid function which was used to represent a probability distribution over a binary variable.
 
@@ -84,3 +90,16 @@ L2-regularization relies on the assumption that a model with small weights is si
 
 >A common mistake when using dropout is to use it both in training and testing. You should use dropout (randomly eliminate nodes) only in training.
 Deep learning frameworks like tensorflow, PaddlePaddle, keras or caffe come with a dropout layer implementation. Don't stress - you will soon learn some of these frameworks.
+
+
+### Multiple layers
+
+Now, not all neural networks look like the one above. They can be way more complicated! In particular, we can do the following things:
+
+* Add more nodes to the input, hidden, and output layers.
+* Add more layers.
+
+![Multi-Layer Neural Network](/notes/Lesson-2/images/neural_network_architecture_layers_2.png)
+
+### Multi-class Classification
+
