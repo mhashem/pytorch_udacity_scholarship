@@ -101,5 +101,9 @@ Now, not all neural networks look like the one above. They can be way more compl
 
 ![Multi-Layer Neural Network](/notes/Lesson-2/images/neural_network_architecture_layers_2.png)
 
+We can imagine a Neural Network as a set of Linear models combined together to have a non-Linear model, like for example the following image, a 3D space model based on two other models, this intuituin helps understand more NN.
+
+![Multi-Layer NN N-Dimensional Space](/notes/Lesson-2/images/neural_network_architecture_layers_n_dimensional_space.png)
+
 ### Multi-class Classification
 
