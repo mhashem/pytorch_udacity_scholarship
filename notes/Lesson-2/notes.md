@@ -111,6 +111,13 @@ L2-regularization relies on the assumption that a model with small weights is si
 Deep learning frameworks like tensorflow, PaddlePaddle, keras or caffe come with a dropout layer implementation. Don't stress - you will soon learn some of these frameworks.
 
 
+### Gradient Checking
+
+>What you should remember from this notebook:
+
+* Gradient checking verifies closeness between the gradients from backpropagation and the numerical approximation of the gradient (computed using forward propagation).
+* Gradient checking is slow, so we don't run it in every iteration of training. You would usually run it only to make sure your code is correct, then turn it off and use backprop for the actual learning process.
+
 ### Multiple layers
 
 Now, not all neural networks look like the one above. They can be way more complicated! In particular, we can do the following things:
@@ -125,4 +132,7 @@ We can imagine a Neural Network as a set of Linear models combined together to h
 ![Multi-Layer NN N-Dimensional Space](/notes/Lesson-2/images/neural_network_architecture_layers_n_dimensional_space.png)
 
 ### Multi-class Classification
+
+
+
 
