@@ -92,6 +92,11 @@ for i in range(0, num_iterations):
 * You have to tune a learning rate hyperparameter  αα .
 * With a well-turned mini-batch size, usually it outperforms either gradient descent or stochastic gradient descent (particularly when the training set is large).
 
+> **What you should remember**:
+
+* Shuffling and Partitioning are the two steps required to build mini-batches
+* Powers of two are often chosen to be the mini-batch size, e.g., 16, 32, 64, 128.
+
 ### Exercise Implementation
 
 #### 1. Gradient Descent
