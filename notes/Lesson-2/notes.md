@@ -126,6 +126,25 @@ Because mini-batch gradient descent makes a parameter update after seeing just a
 
 Momentum takes into account the past gradients to smooth out the update. We will store the 'direction' of the previous gradients in the variable  _**v**_ . Formally, this will be the exponentially weighted average of the gradient on previous steps. You can also think of  _**v**_ as the "velocity" of a ball rolling downhill, building up speed (and momentum) according to the direction of the gradient/slope of the hill.
 
+![Momentum 1](/notes/Lesson-2/images/opt_momentum.png)
+
+>Figure: The red arrows shows the direction taken by one step of mini-batch gradient descent with momentum. The blue points show the direction of the gradient (with respect to the current mini-batch) on each step. Rather than just following the gradient, we let the gradient influence  **_v_**  and then take a step in the direction of  **_v_** .
+
+
+Note that:
+
+The velocity is initialized with zeros. So the algorithm will take a few iterations to "build up" velocity and start to take bigger steps.
+If **_β_=0**, then this just becomes standard gradient descent without momentum.
+How do you choose **_β_**?
+
+The larger the momentum **_β_** is, the smoother the update because the more we take the past gradients into account. But if **_β_** is too big, it could also smooth out the updates too much.
+Common values for **_β_** range from 0.8 to 0.999. If you don't feel inclined to tune this,  **_β=0.9_** is often a reasonable default.
+Tuning the optimal **_β_** for your model might need trying several values to see what works best in term of reducing the value of the cost function  JJ .
+What you should remember:
+
+Momentum takes past gradients into account to smooth out the steps of gradient descent. It can be applied with batch gradient descent, mini-batch gradient descent or stochastic gradient descent.
+You have to tune a momentum hyperparameter ββ and a learning rate **_α_**.
+
 ### Neural Network Architecture
 
 This section starts by showing how linear models actually form a whole probalistic space, and non-linear models is almost like combining 
