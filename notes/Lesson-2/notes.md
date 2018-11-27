@@ -44,6 +44,10 @@ components.
 
 Most deep learning algorithms involve optimization of some sort. Optimization refers to the task of either minimizing or maximizing some function ***f(x)*** by altering ***x***.
 
+A simple optimization method in machine learning is gradient descent ```(GD)```. When you take gradient steps with respect to all  mm  examples on each step, it is also called Batch Gradient Descent.
+
+A variant of this is Stochastic Gradient Descent ```(SGD)```, which is equivalent to mini-batch gradient descent where each mini-batch has just 1 example. The update rule that you have just implemented does not change. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set.
+
 ![Gradient Descent Slide 1](/notes/Lesson-2/images/gradient_descent.png)
 
 
