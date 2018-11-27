@@ -120,6 +120,12 @@ def update_weights(x, y, weights, bias, learnrate):
     return weights, bias
 ```
 
+### Momentum
+
+Because mini-batch gradient descent makes a parameter update after seeing just a subset of examples, the direction of the update has some variance, and so the path taken by mini-batch gradient descent will _"oscillate"_ toward convergence. Using momentum can reduce these oscillations.
+
+Momentum takes into account the past gradients to smooth out the update. We will store the 'direction' of the previous gradients in the variable  _**v**_ . Formally, this will be the exponentially weighted average of the gradient on previous steps. You can also think of  _**v**_ as the "velocity" of a ball rolling downhill, building up speed (and momentum) according to the direction of the gradient/slope of the hill.
+
 ### Neural Network Architecture
 
 This section starts by showing how linear models actually form a whole probalistic space, and non-linear models is almost like combining 
