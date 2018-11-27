@@ -44,8 +44,58 @@ components.
 
 Most deep learning algorithms involve optimization of some sort. Optimization refers to the task of either minimizing or maximizing some function ***f(x)*** by altering ***x***.
 
+A simple optimization method in machine learning is gradient descent ```(GD)```. When you take gradient steps with respect to all  mm  examples on each step, it is also called Batch Gradient Descent.
+
+A variant of this is Stochastic Gradient Descent ```(SGD)```, which is equivalent to mini-batch gradient descent where each mini-batch has just 1 example. The update rule that you have just implemented does not change. What changes is that you would be computing gradients on just one training example at a time, rather than on the whole training set.
+
 ![Gradient Descent Slide 1](/notes/Lesson-2/images/gradient_descent.png)
 
+The code examples below illustrate the difference between stochastic gradient descent and (batch) gradient descent.
+
+* **(Batch) Gradient Descent**
+
+```python
+X = data_input
+Y = labels
+parameters = initialize_parameters(layers_dims)
+for i in range(0, num_iterations):
+    # Forward propagation
+    a, caches = forward_propagation(X, parameters)
+    # Compute cost.
+    cost = compute_cost(a, Y)
+    # Backward propagation.
+    grads = backward_propagation(a, caches, parameters)
+    # Update parameters.
+    parameters = update_parameters(parameters, grads)
+```
+
+* **Stochastic Gradient Descent**
+
+```python
+X = data_input
+Y = labels
+parameters = initialize_parameters(layers_dims)
+for i in range(0, num_iterations):
+    for j in range(0, m):
+        # Forward propagation
+        a, caches = forward_propagation(X[:,j], parameters)
+        # Compute cost
+        cost = compute_cost(a, Y[:,j])
+        # Backward propagation
+        grads = backward_propagation(a, caches, parameters)
+        # Update parameters.
+        parameters = update_parameters(parameters, grads)
+```
+
+>**Note**:
+* The difference between gradient descent, mini-batch gradient descent and stochastic gradient descent is the number of examples you use to perform one update step.
+* You have to tune a learning rate hyperparameter  αα .
+* With a well-turned mini-batch size, usually it outperforms either gradient descent or stochastic gradient descent (particularly when the training set is large).
+
+> **What you should remember**:
+
+* Shuffling and Partitioning are the two steps required to build mini-batches
+* Powers of two are often chosen to be the mini-batch size, e.g., 16, 32, 64, 128.
 
 ### Exercise Implementation
 
@@ -69,6 +119,12 @@ def update_weights(x, y, weights, bias, learnrate):
     bias += learnrate * d_error
     return weights, bias
 ```
+
+### Momentum
+
+Because mini-batch gradient descent makes a parameter update after seeing just a subset of examples, the direction of the update has some variance, and so the path taken by mini-batch gradient descent will _"oscillate"_ toward convergence. Using momentum can reduce these oscillations.
+
+Momentum takes into account the past gradients to smooth out the update. We will store the 'direction' of the previous gradients in the variable  _**v**_ . Formally, this will be the exponentially weighted average of the gradient on previous steps. You can also think of  _**v**_ as the "velocity" of a ball rolling downhill, building up speed (and momentum) according to the direction of the gradient/slope of the hill.
 
 ### Neural Network Architecture
 
