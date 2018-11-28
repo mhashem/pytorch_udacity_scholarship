@@ -158,6 +158,8 @@ Adam on the other hand, clearly outperforms mini-batch gradient descent and Mome
 * Relatively low memory requirements (though higher than gradient descent and gradient descent with momentum)
 * Usually works well even with little tuning of hyperparameters (except  **_α_** )
 
+> For more information check Adam paper: https://arxiv.org/pdf/1412.6980.pdf
+
 ### Neural Network Architecture
 
 This section starts by showing how linear models actually form a whole probalistic space, and non-linear models is almost like combining 
