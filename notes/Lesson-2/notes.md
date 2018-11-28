@@ -145,6 +145,19 @@ What you should remember:
 Momentum takes past gradients into account to smooth out the steps of gradient descent. It can be applied with batch gradient descent, mini-batch gradient descent or stochastic gradient descent.
 You have to tune a momentum hyperparameter ββ and a learning rate **_α_**.
 
+### Adam
+
+**_Adam_** is one of the most effective optimization algorithms for training neural networks. It combines ideas from **_RMSProp_** and **_Momentum_**.
+
+Momentum usually helps, but given a small learning rate and a simplistic dataset, its impact is almost negligeable. Also, the huge oscillations you see in the cost come from the fact that some minibatches are more difficult thans others for the optimization algorithm.
+
+Adam on the other hand, clearly outperforms mini-batch gradient descent and Momentum. If you run a model for more epochs on a simple dataset, all three methods will lead to very good results. However, you've seen that Adam converges a lot faster.
+
+>Some advantages of Adam include:
+
+* Relatively low memory requirements (though higher than gradient descent and gradient descent with momentum)
+* Usually works well even with little tuning of hyperparameters (except  **_α_** )
+
 ### Neural Network Architecture
 
 This section starts by showing how linear models actually form a whole probalistic space, and non-linear models is almost like combining 
