@@ -54,5 +54,37 @@ criterion = nn.NLLLoss()
 
 This separates the usual `criterion = nn.CrossEntropy()` into two steps: softmax and NLLLoss, and is a useful approach should you want the output of a model to be class probabilities rather than class scores.
 
+### Defining a Network in Pytorch
 
 
+
+### Image Classification Steps
+
+Each time we have an image classification project the following steps are typically made:
+
+1. Load and Visualize Data
+2. Preprocess (Normalize, Transform)
+3. Do a research to check if someone has already tackled this problem, and then define the Nerual Network model
+4. Choose appropriate Loss & Optimization Algorithms for your model then `Train your model`
+5. Save model after each check for Validation - Train diversion
+6. Test model
+
+![Image Classification Steps](images/image-classification-steps.png)
+
+
+### MLPs vs CNNs 
+
+MLPs are good but have no idea about the structure of the input being classified, as they attempt to process an input representing the image as 1-D flattened vector.
+
+CNN truely shines for real world problem, where messy data are the case.
+
+![Flattening](images/mlps-flattening.png)
+
+MLPs | CNNs
+-----|-----
+Only use **_Fully Connected_** layes (huge number of parameters quickly fast incresing computational complexity) | Use Sparsely connected layers
+Only accepts **_vectors as input_**| Accept Matrix as Input
+
+> MLPs Flattening Example
+
+![Flattenning NN](images/mlps-flattening-nn.png)
