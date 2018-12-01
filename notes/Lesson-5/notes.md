@@ -374,3 +374,40 @@ One of the hyperparameters of a CNN is referred to as the _stride_ which is the 
 #### Padding
 
 // todo
+
+#### Max Pooling Layer
+
+We're now ready to introduce you to the second and final type of layer that we'll need to introduce before building our own convolutional neural networks.
+
+These so-called pooling layers often take convolutional layers as input.
+Recall that a convolutional layer is a stack of feature maps where we have one feature map for each filter.
+
+A complicated dataset with many different object categories will require a large number of filters, each responsible for finding a pattern in the image.
+
+More filters means a bigger stack, which means that the dimensionality of our convolutional layers can get quite large.
+Higher dimensionality means, we'll need to use more parameters,
+which can lead to over-fitting.
+Thus, we need a method for reducing this dimensionality.
+This is the role of pooling layers within a convolutional neural network.
+We'll focus on two different types of pooling layers.
+The first type is a max pooling layer,
+max pooling layers will take a stack of feature maps as input.
+Here, we've enlarged and visualized all three of the feature maps.
+As with convolutional layers, we'll define a window size and stride.
+In this case, we'll use a window size of two and a stride of two.
+To construct the max pooling layer, we'll work with each feature map separately.
+Let's begin with the first feature map, we start with our window in the top left corner of the image.
+The value of the corresponding node in the max pooling layer is
+calculated by just taking the maximum of the pixels contained in the window.
+In this case, we had a one, nine, five, and four in our window,
+so nine was the maximum.
+If we continue this process and do it for all of our feature maps,
+the output is a stack with the same number of feature maps,
+but each feature map has been reduced in width and height.
+In this case, the width and height are half of that of the previous convolutional layer.
+
+#### Other kinds of pooling
+
+Alexis mentioned one other type of pooling, and it is worth noting that some architectures choose to use average pooling, which chooses to average pixel values in a given window size. So in a 2x2 window, this operation will see 4 pixel values, and return a single, average of those four values, as output!
+
+This kind of pooling is typically not used for image classification problems because maxpooling is better at noticing the most important details about edges and other features in an image, but you may see this used in applications for which smoothing an image is preferable.
