@@ -411,3 +411,76 @@ In this case, the width and height are half of that of the previous convolutiona
 Alexis mentioned one other type of pooling, and it is worth noting that some architectures choose to use average pooling, which chooses to average pixel values in a given window size. So in a 2x2 window, this operation will see 4 pixel values, and return a single, average of those four values, as output!
 
 This kind of pooling is typically not used for image classification problems because maxpooling is better at noticing the most important details about edges and other features in an image, but you may see this used in applications for which smoothing an image is preferable.
+
+### Convolutional Neural Networks in PyTorch
+
+#### 1. Convolutional Layers in PyTorch
+
+To create a convolutional layer in PyTorch, you must first import the necessary module:
+
+```python 
+import torch.nn as nn
+```
+
+Then, there is a two part process to defining a convolutional layer and defining the feedforward behavior of a model (how an input moves through the layers of a network. First you must define a Model class and fill in two functions.
+
+**init**
+
+You can define a convolutional layer in the ```__init__``` function of by using the following format:
+
+```python
+self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0)
+```
+
+**forward**
+
+Then, you refer to that layer in the forward function! Here, I am passing in an input image ```x``` and applying a _ReLu_ function to the output of this layer.
+
+```python
+x = F.relu(self.conv1(x))
+```
+
+**Arguments**
+
+You must pass the following arguments:
+
+* ```in_channels``` - The number of inputs (in depth), 3 for an RGB image, for example.
+* ```out_channels``` - The number of output channels, i.e. the number of filtered "images" a convolutional layer is made of or the number of unique, convolutional kernels that will be applied to an input.
+* ```kernel_size``` - Number specifying both the height and width of the (square) convolutional kernel.
+
+There are some additional, optional arguments that you might like to tune:
+
+* ```stride``` - The stride of the convolution. If you don't specify anything, ```stride``` is set to ```1```.
+* ```padding``` - The border of 0's around an input array. If you don't specify anything, ```padding``` is set to ```0```.
+
+>**Note**: It is possible to represent both kernel_size and stride as either a number or a tuple
+
+There are many other tunable arguments that you can set to change the behavior of your convolutional layers. To read more about these, we recommend perusing the official [documentation](https://pytorch.org/docs/stable/nn.html#conv2d).
+
+
+#### 2. Pooling Layers
+
+Pooling layers take in a kernel_size and a stride. Typically the same value, the is the down-sampling factor. For example, the following code will down-sample an input's x-y dimensions, by a factor of 2:
+
+```python
+self.pool = nn.MaxPool2d(2,2)
+```
+
+**forward**
+
+Here, we see that poling layer being applied in the forward function.
+
+```python
+x = F.relu(self.conv1(x))
+x = self.pool(x)
+```
+
+
+
+
+
+
+
+
+
+
